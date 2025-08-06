@@ -4,9 +4,13 @@ import './index.css';
 import App from './App.jsx';
 
 import Library from './chapter_03/Library';
+import Clock from './chapter_04/Clock';
 
-createRoot(document.getElementById('root')).render(
-    <StrictMode>
-        <Library />
-    </StrictMode>
-);
+const root = createRoot(document.getElementById('root'));
+setInterval(() => {
+    root.render(
+        <StrictMode>
+            <Clock />
+        </StrictMode>
+    );
+}, 1000);
